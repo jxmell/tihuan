@@ -1,0 +1,1895 @@
+[20:42:29] IMG 2018-10-09-raspbian-stretch-lite
+[20:42:29] SHA 4f30a5365296658d66ef8a9f878a25d229e2d5fa
+[20:42:29] V7  4.14.71-v7+
+[20:42:29] VER 4.14.71+
+[20:42:29] Begin /home/arkbird/wifibroadcast-image-builder
+[20:42:29] Begin /home/arkbird/wifibroadcast-image-builder/stages/00-Prerequisites
+[20:42:29] End /home/arkbird/wifibroadcast-image-builder/stages/00-Prerequisites
+[20:42:29] Begin /home/arkbird/wifibroadcast-image-builder/stages/01-Baseimage
+[20:42:29] End /home/arkbird/wifibroadcast-image-builder/stages/01-Baseimage
+[20:42:29] Begin /home/arkbird/wifibroadcast-image-builder/stages/02-Kernel
+[20:42:30] End /home/arkbird/wifibroadcast-image-builder/stages/02-Kernel
+[20:42:30] Begin /home/arkbird/wifibroadcast-image-builder/stages/03-Packages
+[20:42:31] End /home/arkbird/wifibroadcast-image-builder/stages/03-Packages
+[20:42:31] Begin /home/arkbird/wifibroadcast-image-builder/stages/04-Wifibroadcast
+[20:44:57] /boot: offset 4194304, length 45925376
+[20:44:57] /:     offset 50331648, length 3963617280
+resize2fs 1.44.1 (24-Mar-2018)
+The filesystem is already 967680 (4k) blocks long.  Nothing to do!
+
+[20:45:02] Begin /home/arkbird/wifibroadcast-image-builder/stages/04-Wifibroadcast/00-run.sh
+~/wifibroadcast-image-builder/work/04-Wifibroadcast ~/wifibroadcast-image-builder/stages/04-Wifibroadcast ~/wifibroadcast-image-builder
+[20:45:02] Removing old GIT dir
+~/wifibroadcast-image-builder/work/04-Wifibroadcast/GIT ~/wifibroadcast-image-builder/work/04-Wifibroadcast ~/wifibroadcast-image-builder/stages/04-Wifibroadcast ~/wifibroadcast-image-builder
+[20:45:03] Download all WFB Sources
+[20:45:03] v4l2loopback
+Cloning into 'v4l2loopback'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 1689 (delta 0), reused 1 (delta 0), pack-reused 1686
+Receiving objects: 100% (1689/1689), 769.88 KiB | 483.00 KiB/s, done.
+Resolving deltas: 100% (949/949), done.
+[20:45:10] Download OpenVG
+Cloning into 'openvg'...
+remote: Enumerating objects: 122, done.
+remote: Total 122 (delta 0), reused 0 (delta 0), pack-reused 122
+Receiving objects: 100% (122/122), 3.66 MiB | 208.00 KiB/s, done.
+Resolving deltas: 100% (13/13), done.
+[20:45:31] Download Mavlink router
+Cloning into 'mavlink-router'...
+remote: Enumerating objects: 1034, done.
+remote: Total 1034 (delta 0), reused 0 (delta 0), pack-reused 1034
+Receiving objects: 100% (1034/1034), 324.33 KiB | 359.00 KiB/s, done.
+Resolving deltas: 100% (666/666), done.
+~/wifibroadcast-image-builder/work/04-Wifibroadcast/GIT/mavlink-router ~/wifibroadcast-image-builder/work/04-Wifibroadcast/GIT ~/wifibroadcast-image-builder/work/04-Wifibroadcast ~/wifibroadcast-image-builder/stages/04-Wifibroadcast ~/wifibroadcast-image-builder
+Submodule 'modules/gtest' (https://github.com/google/googletest.git) registered for path 'modules/gtest'
+Submodule 'modules/mavlink' (https://github.com/mavlink/mavlink.git) registered for path 'modules/mavlink'
+Cloning into '/home/arkbird/wifibroadcast-image-builder/work/04-Wifibroadcast/GIT/mavlink-router/modules/gtest'...
+Cloning into '/home/arkbird/wifibroadcast-image-builder/work/04-Wifibroadcast/GIT/mavlink-router/modules/mavlink'...
+Submodule path 'modules/gtest': checked out '13206d6f53aaff844f2d3595a01ac83a29e383db'
+Submodule path 'modules/mavlink': checked out '1e9840fd96702a29433f6f7914edbdab0d97023c'
+~/wifibroadcast-image-builder/work/04-Wifibroadcast/GIT/mavlink-router/modules/mavlink ~/wifibroadcast-image-builder/work/04-Wifibroadcast/GIT/mavlink-router ~/wifibroadcast-image-builder/work/04-Wifibroadcast/GIT ~/wifibroadcast-image-builder/work/04-Wifibroadcast ~/wifibroadcast-image-builder/stages/04-Wifibroadcast ~/wifibroadcast-image-builder
+Cloning into 'pymavlink'...
+remote: Enumerating objects: 32, done.
+remote: Counting objects: 100% (32/32), done.
+remote: Compressing objects: 100% (22/22), done.
+remote: Total 14763 (delta 15), reused 14 (delta 10), pack-reused 14731
+Receiving objects: 100% (14763/14763), 6.92 MiB | 530.00 KiB/s, done.
+Resolving deltas: 100% (10739/10739), done.
+~/wifibroadcast-image-builder/work/04-Wifibroadcast/GIT/mavlink-router ~/wifibroadcast-image-builder/work/04-Wifibroadcast/GIT ~/wifibroadcast-image-builder/work/04-Wifibroadcast ~/wifibroadcast-image-builder/stages/04-Wifibroadcast ~/wifibroadcast-image-builder
+~/wifibroadcast-image-builder/work/04-Wifibroadcast/GIT ~/wifibroadcast-image-builder/work/04-Wifibroadcast ~/wifibroadcast-image-builder/stages/04-Wifibroadcast ~/wifibroadcast-image-builder
+[20:46:27] Download cmavnode
+Cloning into 'cmavnode'...
+remote: Enumerating objects: 1900, done.
+remote: Total 1900 (delta 0), reused 0 (delta 0), pack-reused 1900
+Receiving objects: 100% (1900/1900), 366.29 KiB | 391.00 KiB/s, done.
+Resolving deltas: 100% (1375/1375), done.
+~/wifibroadcast-image-builder/work/04-Wifibroadcast/GIT/cmavnode ~/wifibroadcast-image-builder/work/04-Wifibroadcast/GIT ~/wifibroadcast-image-builder/work/04-Wifibroadcast ~/wifibroadcast-image-builder/stages/04-Wifibroadcast ~/wifibroadcast-image-builder
+Submodule 'include/mavlink2' (https://github.com/mavlink/c_library_v2.git) registered for path 'include/mavlink2'
+Cloning into '/home/arkbird/wifibroadcast-image-builder/work/04-Wifibroadcast/GIT/cmavnode/include/mavlink2'...
+Submodule path 'include/mavlink2': checked out '10d730a446995b989e88ee15f14d9c28a3a428cc'
+~/wifibroadcast-image-builder/work/04-Wifibroadcast/GIT ~/wifibroadcast-image-builder/work/04-Wifibroadcast ~/wifibroadcast-image-builder/stages/04-Wifibroadcast ~/wifibroadcast-image-builder
+[20:46:48] Download EZWFB - Base
+Cloning into 'wifibroadcast-base'...
+remote: Enumerating objects: 150, done.
+remote: Total 150 (delta 0), reused 0 (delta 0), pack-reused 150
+Receiving objects: 100% (150/150), 380.13 KiB | 375.00 KiB/s, done.
+Resolving deltas: 100% (77/77), done.
+~/wifibroadcast-image-builder/work/04-Wifibroadcast/GIT/wifibroadcast-base ~/wifibroadcast-image-builder/work/04-Wifibroadcast/GIT ~/wifibroadcast-image-builder/work/04-Wifibroadcast ~/wifibroadcast-image-builder/stages/04-Wifibroadcast ~/wifibroadcast-image-builder
+Submodule 'mavlink' (https://github.com/mavlink/c_library_v2.git) registered for path 'mavlink'
+Cloning into '/home/arkbird/wifibroadcast-image-builder/work/04-Wifibroadcast/GIT/wifibroadcast-base/mavlink'...
+Submodule path 'mavlink': checked out '0c4b296a63dbe1588815a458e87ace3c302f7226'
+~/wifibroadcast-image-builder/work/04-Wifibroadcast/GIT ~/wifibroadcast-image-builder/work/04-Wifibroadcast ~/wifibroadcast-image-builder/stages/04-Wifibroadcast ~/wifibroadcast-image-builder
+[20:47:09] Download EZWFB - OSD
+Cloning into 'wifibroadcast-osd'...
+remote: Enumerating objects: 71, done.
+remote: Total 71 (delta 0), reused 0 (delta 0), pack-reused 71
+Unpacking objects: 100% (71/71), done.
+~/wifibroadcast-image-builder/work/04-Wifibroadcast/GIT/wifibroadcast-osd ~/wifibroadcast-image-builder/work/04-Wifibroadcast/GIT ~/wifibroadcast-image-builder/work/04-Wifibroadcast ~/wifibroadcast-image-builder/stages/04-Wifibroadcast ~/wifibroadcast-image-builder
+Submodule 'mavlink' (https://github.com/mavlink/c_library_v2.git) registered for path 'mavlink'
+Cloning into '/home/arkbird/wifibroadcast-image-builder/work/04-Wifibroadcast/GIT/wifibroadcast-osd/mavlink'...
+Submodule path 'mavlink': checked out '0c4b296a63dbe1588815a458e87ace3c302f7226'
+~/wifibroadcast-image-builder/work/04-Wifibroadcast/GIT ~/wifibroadcast-image-builder/work/04-Wifibroadcast ~/wifibroadcast-image-builder/stages/04-Wifibroadcast ~/wifibroadcast-image-builder
+[20:47:30] Download EZWFB - RC
+Cloning into 'wifibroadcast-rc'...
+remote: Enumerating objects: 18, done.
+remote: Total 18 (delta 0), reused 0 (delta 0), pack-reused 18
+Unpacking objects: 100% (18/18), done.
+[20:47:33] Download EZWFB - Status
+Cloning into 'wifibroadcast-status'...
+remote: Enumerating objects: 14, done.
+remote: Total 14 (delta 0), reused 0 (delta 0), pack-reused 14
+Unpacking objects: 100% (14/14), done.
+[20:47:35] Download EZWFB - Scripts
+Cloning into 'wifibroadcast-scripts'...
+remote: Enumerating objects: 114, done.
+remote: Total 114 (delta 0), reused 0 (delta 0), pack-reused 114
+Receiving objects: 100% (114/114), 62.46 KiB | 140.00 KiB/s, done.
+Resolving deltas: 100% (62/62), done.
+[20:47:39] Download EZWFB - Misc
+Cloning into 'wifibroadcast-misc'...
+remote: Enumerating objects: 7, done.
+remote: Total 7 (delta 0), reused 0 (delta 0), pack-reused 7
+Unpacking objects: 100% (7/7), done.
+[20:47:41] Download EZWFB - hello_video
+Cloning into 'wifibroadcast-hello_video'...
+remote: Enumerating objects: 24, done.
+remote: Total 24 (delta 0), reused 0 (delta 0), pack-reused 24
+Unpacking objects: 100% (24/24), done.
+[20:47:44] Download EZWFB - Splash
+Cloning into 'wifibroadcast-splash'...
+remote: Enumerating objects: 37, done.
+remote: Total 37 (delta 0), reused 0 (delta 0), pack-reused 37
+Unpacking objects: 100% (37/37), done.
+~/wifibroadcast-image-builder/work/04-Wifibroadcast ~/wifibroadcast-image-builder/stages/04-Wifibroadcast ~/wifibroadcast-image-builder
+~/wifibroadcast-image-builder/stages/04-Wifibroadcast ~/wifibroadcast-image-builder
+[20:47:47] End /home/arkbird/wifibroadcast-image-builder/stages/04-Wifibroadcast/00-run.sh
+[20:47:47] Begin /home/arkbird/wifibroadcast-image-builder/stages/04-Wifibroadcast/01-run.sh
+~/wifibroadcast-image-builder/work/04-Wifibroadcast ~/wifibroadcast-image-builder/stages/04-Wifibroadcast ~/wifibroadcast-image-builder
+[20:47:48] Copy all WFB Sources to RPi image
+~/wifibroadcast-image-builder/stages/04-Wifibroadcast ~/wifibroadcast-image-builder
+[20:48:00] End /home/arkbird/wifibroadcast-image-builder/stages/04-Wifibroadcast/01-run.sh
+[20:48:00] Begin /home/arkbird/wifibroadcast-image-builder/stages/04-Wifibroadcast/01-run-chroot.sh
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+rm -f *.o *.inc *.so font2openvg *.c~ *.h~
+indent -linux -c 60 -brf -l 132  libshapes.c oglinit.c fontsystem.c shapes.h fontinfo.h
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+gcc -std=gnu89 -Wall -Wextra -Wconversion -Wdouble-promotion -Wshadow -Wno-sign-conversion -O2 -I/opt/vc/include -I/opt/vc/include/interface/vmcs_host/linux -I/opt/vc/include/interface/vcos/pthreads -fPIC -c oglinit.c
+g++ -I/usr/include/freetype2 fontutil/font2openvg.cpp -o font2openvg -lfreetype
+./font2openvg /usr/share/fonts/truetype/dejavu/DejaVuSans.ttf DejaVuSans.inc DejaVuSans
+468 glyphs written
+./font2openvg /usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf DejaVuSansMono.inc DejaVuSansMono
+468 glyphs written
+gcc -std=gnu89 -Wall -Wextra -Wconversion -Wdouble-promotion -Wshadow -Wno-sign-conversion -O2 -I/opt/vc/include -I/opt/vc/include/interface/vmcs_host/linux -I/opt/vc/include/interface/vcos/pthreads -fPIC -c libshapes.c
+libshapes.c: In function 'WindowSaveAsPng':
+libshapes.c:1305:8: warning: variable 'width' might be clobbered by 'longjmp' or 'vfork' [-Wclobbered]
+  VGint width = *w;
+        ^~~~~
+libshapes.c:1306:8: warning: variable 'height' might be clobbered by 'longjmp' or 'vfork' [-Wclobbered]
+  VGint height = *h;
+        ^~~~~~
+libshapes.c:1325:68: warning: argument 'w' might be clobbered by 'longjmp' or 'vfork' [-Wclobbered]
+ bool WindowSaveAsPng(const char *filename, VGint x, VGint y, VGint w, VGint h, int zlib_level) {
+                                                                    ^
+libshapes.c:1325:77: warning: argument 'h' might be clobbered by 'longjmp' or 'vfork' [-Wclobbered]
+ bool WindowSaveAsPng(const char *filename, VGint x, VGint y, VGint w, VGint h, int zlib_level) {
+                                                                             ^
+gcc -std=gnu89 -Wall -Wextra -Wconversion -Wdouble-promotion -Wshadow -Wno-sign-conversion -O2 -I/opt/vc/include -I/opt/vc/include/interface/vmcs_host/linux -I/opt/vc/include/interface/vcos/pthreads -fPIC -I/usr/include/freetype2 -c fontsystem.c
+gcc -L/opt/vc/lib -lEGL -lGLESv2 -ljpeg -lpng -lfreetype -lfontconfig -lz -shared -o libshapes.so -Wl,-soname,libshapes.so.2.0.0 oglinit.o libshapes.o fontsystem.o
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+install -m 755 -p font2openvg /usr/bin/
+install -m 755 -p libshapes.so /usr/lib/libshapes.so.2.0.0
+strip --strip-unneeded /usr/lib/libshapes.so.2.0.0
+ln -f -s /usr/lib/libshapes.so.2.0.0 /usr/lib/libshapes.so
+ldconfig
+install -m 644 -p shapes.h /usr/include/
+install -m 644 -p fontinfo.h /usr/include/
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_PAPER = "zh_CN.UTF-8",
+	LC_NUMERIC = "zh_CN.UTF-8",
+	LC_IDENTIFICATION = "zh_CN.UTF-8",
+	LC_MEASUREMENT = "zh_CN.UTF-8",
+	LC_NAME = "zh_CN.UTF-8",
+	LC_TELEPHONE = "zh_CN.UTF-8",
+	LC_ADDRESS = "zh_CN.UTF-8",
+	LC_MONETARY = "zh_CN.UTF-8",
+	LC_TIME = "zh_CN.UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_PAPER = "zh_CN.UTF-8",
+	LC_NUMERIC = "zh_CN.UTF-8",
+	LC_IDENTIFICATION = "zh_CN.UTF-8",
+	LC_MEASUREMENT = "zh_CN.UTF-8",
+	LC_NAME = "zh_CN.UTF-8",
+	LC_TELEPHONE = "zh_CN.UTF-8",
+	LC_ADDRESS = "zh_CN.UTF-8",
+	LC_MONETARY = "zh_CN.UTF-8",
+	LC_TIME = "zh_CN.UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_PAPER = "zh_CN.UTF-8",
+	LC_NUMERIC = "zh_CN.UTF-8",
+	LC_IDENTIFICATION = "zh_CN.UTF-8",
+	LC_MEASUREMENT = "zh_CN.UTF-8",
+	LC_NAME = "zh_CN.UTF-8",
+	LC_TELEPHONE = "zh_CN.UTF-8",
+	LC_ADDRESS = "zh_CN.UTF-8",
+	LC_MONETARY = "zh_CN.UTF-8",
+	LC_TIME = "zh_CN.UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_PAPER = "zh_CN.UTF-8",
+	LC_NUMERIC = "zh_CN.UTF-8",
+	LC_IDENTIFICATION = "zh_CN.UTF-8",
+	LC_MEASUREMENT = "zh_CN.UTF-8",
+	LC_NAME = "zh_CN.UTF-8",
+	LC_TELEPHONE = "zh_CN.UTF-8",
+	LC_ADDRESS = "zh_CN.UTF-8",
+	LC_MONETARY = "zh_CN.UTF-8",
+	LC_TIME = "zh_CN.UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+libtoolize: putting auxiliary files in AC_CONFIG_AUX_DIR, 'build-aux'.
+libtoolize: linking file 'build-aux/ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+libtoolize: linking file 'm4/libtool.m4'
+libtoolize: linking file 'm4/ltoptions.m4'
+libtoolize: linking file 'm4/ltsugar.m4'
+libtoolize: linking file 'm4/ltversion.m4'
+libtoolize: linking file 'm4/lt~obsolete.m4'
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_PAPER = "zh_CN.UTF-8",
+	LC_NUMERIC = "zh_CN.UTF-8",
+	LC_IDENTIFICATION = "zh_CN.UTF-8",
+	LC_MEASUREMENT = "zh_CN.UTF-8",
+	LC_NAME = "zh_CN.UTF-8",
+	LC_TELEPHONE = "zh_CN.UTF-8",
+	LC_ADDRESS = "zh_CN.UTF-8",
+	LC_MONETARY = "zh_CN.UTF-8",
+	LC_TIME = "zh_CN.UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_PAPER = "zh_CN.UTF-8",
+	LC_NUMERIC = "zh_CN.UTF-8",
+	LC_IDENTIFICATION = "zh_CN.UTF-8",
+	LC_MEASUREMENT = "zh_CN.UTF-8",
+	LC_NAME = "zh_CN.UTF-8",
+	LC_TELEPHONE = "zh_CN.UTF-8",
+	LC_ADDRESS = "zh_CN.UTF-8",
+	LC_MONETARY = "zh_CN.UTF-8",
+	LC_TIME = "zh_CN.UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_PAPER = "zh_CN.UTF-8",
+	LC_NUMERIC = "zh_CN.UTF-8",
+	LC_IDENTIFICATION = "zh_CN.UTF-8",
+	LC_MEASUREMENT = "zh_CN.UTF-8",
+	LC_NAME = "zh_CN.UTF-8",
+	LC_TELEPHONE = "zh_CN.UTF-8",
+	LC_ADDRESS = "zh_CN.UTF-8",
+	LC_MONETARY = "zh_CN.UTF-8",
+	LC_TIME = "zh_CN.UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_TIME = "zh_CN.UTF-8",
+	LC_MONETARY = "zh_CN.UTF-8",
+	LC_ADDRESS = "zh_CN.UTF-8",
+	LC_TELEPHONE = "zh_CN.UTF-8",
+	LC_NAME = "zh_CN.UTF-8",
+	LC_MEASUREMENT = "zh_CN.UTF-8",
+	LC_IDENTIFICATION = "zh_CN.UTF-8",
+	LC_NUMERIC = "zh_CN.UTF-8",
+	LC_PAPER = "zh_CN.UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_PAPER = "zh_CN.UTF-8",
+	LC_NUMERIC = "zh_CN.UTF-8",
+	LC_IDENTIFICATION = "zh_CN.UTF-8",
+	LC_MEASUREMENT = "zh_CN.UTF-8",
+	LC_NAME = "zh_CN.UTF-8",
+	LC_TELEPHONE = "zh_CN.UTF-8",
+	LC_ADDRESS = "zh_CN.UTF-8",
+	LC_MONETARY = "zh_CN.UTF-8",
+	LC_TIME = "zh_CN.UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_TIME = "zh_CN.UTF-8",
+	LC_MONETARY = "zh_CN.UTF-8",
+	LC_ADDRESS = "zh_CN.UTF-8",
+	LC_TELEPHONE = "zh_CN.UTF-8",
+	LC_NAME = "zh_CN.UTF-8",
+	LC_MEASUREMENT = "zh_CN.UTF-8",
+	LC_IDENTIFICATION = "zh_CN.UTF-8",
+	LC_NUMERIC = "zh_CN.UTF-8",
+	LC_PAPER = "zh_CN.UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_TIME = "zh_CN.UTF-8",
+	LC_MONETARY = "zh_CN.UTF-8",
+	LC_ADDRESS = "zh_CN.UTF-8",
+	LC_TELEPHONE = "zh_CN.UTF-8",
+	LC_NAME = "zh_CN.UTF-8",
+	LC_MEASUREMENT = "zh_CN.UTF-8",
+	LC_IDENTIFICATION = "zh_CN.UTF-8",
+	LC_NUMERIC = "zh_CN.UTF-8",
+	LC_PAPER = "zh_CN.UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+configure.ac:13: installing 'build-aux/compile'
+configure.ac:31: installing 'build-aux/config.guess'
+configure.ac:31: installing 'build-aux/config.sub'
+configure.ac:18: installing 'build-aux/install-sh'
+configure.ac:18: installing 'build-aux/missing'
+Makefile.am: installing 'build-aux/depcomp'
+parallel-tests: installing 'build-aux/test-driver'
+
+----------------------------------------------------------------
+Initialized build system. For a common configuration please run:
+----------------------------------------------------------------
+
+./configure CFLAGS='-g -O2' CXXFLAGS='-g -O2' --sysconfdir=/etc --localstatedir=/var --libdir=/usr/lib          --with-rootprefix=         --with-rootlibdir=/lib          
+
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... 64
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking whether to enable maintainer-specific portions of Makefiles... yes
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking for style of include used by make... GNU
+checking whether make supports nested variables... yes
+checking how to create a pax tar archive... gnutar
+checking dependency style of gcc... gcc3
+checking whether make supports nested variables... (cached) yes
+checking for gcc option to accept ISO C99... none needed
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking dependency style of g++... gcc3
+checking whether g++ supports C++11 features with -std=gnu++11... yes
+checking for a Python interpreter with version >= 2.7... python
+checking for python... /usr/bin/python
+checking for python version... 2.7
+checking for python platform... linux2
+checking for python script directory... ${prefix}/lib/python2.7/dist-packages
+checking for python extension module directory... ${exec_prefix}/lib/python2.7/dist-packages
+checking build system type... armv7l-unknown-linux-gnueabihf
+checking host system type... armv7l-unknown-linux-gnueabihf
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert armv7l-unknown-linux-gnueabihf file names to armv7l-unknown-linux-gnueabihf format... func_convert_file_noop
+checking how to convert armv7l-unknown-linux-gnueabihf file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking how to run the C++ preprocessor... g++ -std=gnu++11 -E
+checking for ld used by g++ -std=gnu++11... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking whether the g++ -std=gnu++11 linker (/usr/bin/ld) supports shared libraries... yes
+checking for g++ -std=gnu++11 option to produce PIC... -fPIC -DPIC
+checking if g++ -std=gnu++11 PIC flag -fPIC -DPIC works... yes
+checking if g++ -std=gnu++11 static flag -static works... yes
+checking if g++ -std=gnu++11 supports -c -o file.o... yes
+checking if g++ -std=gnu++11 supports -c -o file.o... (cached) yes
+checking whether the g++ -std=gnu++11 linker (/usr/bin/ld) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether _Static_assert() is supported... yes
+checking whether _Noreturn is supported... yes
+checking systemd system unit dir... /lib/systemd/system
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+
+	mavlink-router 1
+	================
+
+	prefix:			/usr
+	sysconfdir:		/etc
+	libdir:			/usr/lib64
+	rootlibdir:		/usr/lib64
+	includedir:		${prefix}/include
+	bindir:			${exec_prefix}/bin
+
+	C compiler:		gcc
+	C++ compiler:		g++ -std=gnu++11
+
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+  GEN      include/mavlink/ardupilotmega/mavlink.h
+WARNING: Failed to import lxml module etree. Are lxml, libxml2 and libxslt installed? XML validation will not be performed
+Validation skipped for ./modules/mavlink/message_definitions/v1.0/ardupilotmega.xml.
+Parsing ./modules/mavlink/message_definitions/v1.0/ardupilotmega.xml
+MAV_CMD
+MAV_CMD_DO_GRIPPER
+MAV_CMD_DO_AUTOTUNE_ENABLE
+MAV_CMD_NAV_ALTITUDE_WAIT
+MAV_CMD_POWER_OFF_INITIATED
+MAV_CMD_SOLO_BTN_FLY_CLICK
+MAV_CMD_SOLO_BTN_FLY_HOLD
+MAV_CMD_SOLO_BTN_PAUSE_CLICK
+MAV_CMD_DO_START_MAG_CAL
+MAV_CMD_DO_ACCEPT_MAG_CAL
+MAV_CMD_DO_CANCEL_MAG_CAL
+MAV_CMD_ACCELCAL_VEHICLE_POS
+MAV_CMD_DO_SEND_BANNER
+MAV_CMD_GIMBAL_RESET
+MAV_CMD_SET_FACTORY_TEST_MODE
+MAV_CMD_GIMBAL_AXIS_CALIBRATION_STATUS
+MAV_CMD_GIMBAL_REQUEST_AXIS_CALIBRATION
+MAV_CMD_GIMBAL_FULL_RESET
+Note: message DATA64 is longer than 64 bytes long (74 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message DATA96 is longer than 64 bytes long (106 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message REMOTE_LOG_DATA_BLOCK is longer than 64 bytes long (214 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message DEVICE_OP_READ_REPLY is longer than 64 bytes long (143 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message DEVICE_OP_WRITE is longer than 64 bytes long (187 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Validation skipped for ./modules/mavlink/message_definitions/v1.0/common.xml.
+Parsing ./modules/mavlink/message_definitions/v1.0/common.xml
+MAV_CMD
+MAV_CMD_NAV_WAYPOINT
+MAV_CMD_NAV_LOITER_UNLIM
+MAV_CMD_NAV_LOITER_TURNS
+MAV_CMD_NAV_LOITER_TIME
+MAV_CMD_NAV_RETURN_TO_LAUNCH
+MAV_CMD_NAV_LAND
+MAV_CMD_NAV_TAKEOFF
+MAV_CMD_NAV_LAND_LOCAL
+MAV_CMD_NAV_TAKEOFF_LOCAL
+MAV_CMD_NAV_FOLLOW
+MAV_CMD_NAV_CONTINUE_AND_CHANGE_ALT
+MAV_CMD_NAV_LOITER_TO_ALT
+MAV_CMD_DO_FOLLOW
+MAV_CMD_DO_FOLLOW_REPOSITION
+MAV_CMD_NAV_ROI
+MAV_CMD_NAV_PATHPLANNING
+MAV_CMD_NAV_SPLINE_WAYPOINT
+MAV_CMD_NAV_VTOL_TAKEOFF
+MAV_CMD_NAV_VTOL_LAND
+MAV_CMD_NAV_GUIDED_ENABLE
+MAV_CMD_NAV_DELAY
+MAV_CMD_NAV_PAYLOAD_PLACE
+MAV_CMD_NAV_LAST
+MAV_CMD_CONDITION_DELAY
+MAV_CMD_CONDITION_CHANGE_ALT
+MAV_CMD_CONDITION_DISTANCE
+MAV_CMD_CONDITION_YAW
+MAV_CMD_CONDITION_LAST
+MAV_CMD_DO_SET_MODE
+MAV_CMD_DO_JUMP
+MAV_CMD_DO_CHANGE_SPEED
+MAV_CMD_DO_SET_HOME
+MAV_CMD_DO_SET_PARAMETER
+MAV_CMD_DO_SET_RELAY
+MAV_CMD_DO_REPEAT_RELAY
+MAV_CMD_DO_SET_SERVO
+MAV_CMD_DO_REPEAT_SERVO
+MAV_CMD_DO_FLIGHTTERMINATION
+MAV_CMD_DO_CHANGE_ALTITUDE
+MAV_CMD_DO_LAND_START
+MAV_CMD_DO_RALLY_LAND
+MAV_CMD_DO_GO_AROUND
+MAV_CMD_DO_REPOSITION
+MAV_CMD_DO_PAUSE_CONTINUE
+MAV_CMD_DO_SET_REVERSE
+MAV_CMD_DO_CONTROL_VIDEO
+MAV_CMD_DO_SET_ROI
+MAV_CMD_DO_DIGICAM_CONFIGURE
+MAV_CMD_DO_DIGICAM_CONTROL
+MAV_CMD_DO_MOUNT_CONFIGURE
+MAV_CMD_DO_MOUNT_CONTROL
+MAV_CMD_DO_SET_CAM_TRIGG_DIST
+MAV_CMD_DO_FENCE_ENABLE
+MAV_CMD_DO_PARACHUTE
+MAV_CMD_DO_MOTOR_TEST
+MAV_CMD_DO_INVERTED_FLIGHT
+MAV_CMD_NAV_SET_YAW_SPEED
+MAV_CMD_DO_SET_CAM_TRIGG_INTERVAL
+MAV_CMD_DO_MOUNT_CONTROL_QUAT
+MAV_CMD_DO_GUIDED_MASTER
+MAV_CMD_DO_GUIDED_LIMITS
+MAV_CMD_DO_ENGINE_CONTROL
+MAV_CMD_DO_LAST
+MAV_CMD_PREFLIGHT_CALIBRATION
+MAV_CMD_PREFLIGHT_SET_SENSOR_OFFSETS
+MAV_CMD_PREFLIGHT_UAVCAN
+MAV_CMD_PREFLIGHT_STORAGE
+MAV_CMD_PREFLIGHT_REBOOT_SHUTDOWN
+MAV_CMD_OVERRIDE_GOTO
+MAV_CMD_MISSION_START
+MAV_CMD_COMPONENT_ARM_DISARM
+MAV_CMD_GET_HOME_POSITION
+MAV_CMD_START_RX_PAIR
+MAV_CMD_GET_MESSAGE_INTERVAL
+MAV_CMD_SET_MESSAGE_INTERVAL
+MAV_CMD_REQUEST_PROTOCOL_VERSION
+MAV_CMD_REQUEST_AUTOPILOT_CAPABILITIES
+MAV_CMD_REQUEST_CAMERA_INFORMATION
+MAV_CMD_REQUEST_CAMERA_SETTINGS
+MAV_CMD_REQUEST_STORAGE_INFORMATION
+MAV_CMD_STORAGE_FORMAT
+MAV_CMD_REQUEST_CAMERA_CAPTURE_STATUS
+MAV_CMD_REQUEST_FLIGHT_INFORMATION
+MAV_CMD_RESET_CAMERA_SETTINGS
+MAV_CMD_SET_CAMERA_MODE
+MAV_CMD_IMAGE_START_CAPTURE
+MAV_CMD_IMAGE_STOP_CAPTURE
+MAV_CMD_REQUEST_CAMERA_IMAGE_CAPTURE
+MAV_CMD_DO_TRIGGER_CONTROL
+MAV_CMD_VIDEO_START_CAPTURE
+MAV_CMD_VIDEO_STOP_CAPTURE
+MAV_CMD_VIDEO_START_STREAMING
+MAV_CMD_VIDEO_STOP_STREAMING
+MAV_CMD_REQUEST_VIDEO_STREAM_INFORMATION
+MAV_CMD_LOGGING_START
+MAV_CMD_LOGGING_STOP
+MAV_CMD_AIRFRAME_CONFIGURATION
+MAV_CMD_PANORAMA_CREATE
+MAV_CMD_DO_VTOL_TRANSITION
+MAV_CMD_SET_GUIDED_SUBMODE_STANDARD
+MAV_CMD_SET_GUIDED_SUBMODE_CIRCLE
+MAV_CMD_CONDITION_GATE
+MAV_CMD_ARM_AUTHORIZATION_REQUEST
+MAV_CMD_NAV_FENCE_RETURN_POINT
+MAV_CMD_NAV_FENCE_POLYGON_VERTEX_INCLUSION
+MAV_CMD_NAV_FENCE_POLYGON_VERTEX_EXCLUSION
+MAV_CMD_NAV_FENCE_CIRCLE_INCLUSION
+MAV_CMD_NAV_FENCE_CIRCLE_EXCLUSION
+MAV_CMD_NAV_RALLY_POINT
+MAV_CMD_UAVCAN_GET_NODE_INFO
+MAV_CMD_PAYLOAD_PREPARE_DEPLOY
+MAV_CMD_PAYLOAD_CONTROL_DEPLOY
+MAV_CMD_WAYPOINT_USER_1
+MAV_CMD_WAYPOINT_USER_2
+MAV_CMD_WAYPOINT_USER_3
+MAV_CMD_WAYPOINT_USER_4
+MAV_CMD_WAYPOINT_USER_5
+MAV_CMD_SPATIAL_USER_1
+MAV_CMD_SPATIAL_USER_2
+MAV_CMD_SPATIAL_USER_3
+MAV_CMD_SPATIAL_USER_4
+MAV_CMD_SPATIAL_USER_5
+MAV_CMD_USER_1
+MAV_CMD_USER_2
+MAV_CMD_USER_3
+MAV_CMD_USER_4
+MAV_CMD_USER_5
+MAV_CMD_ACK
+MAV_CMD_ACK_OK
+MAV_CMD_ACK_ERR_FAIL
+MAV_CMD_ACK_ERR_ACCESS_DENIED
+MAV_CMD_ACK_ERR_NOT_SUPPORTED
+MAV_CMD_ACK_ERR_COORDINATE_FRAME_NOT_SUPPORTED
+MAV_CMD_ACK_ERR_COORDINATES_OUT_OF_RANGE
+MAV_CMD_ACK_ERR_X_LAT_OUT_OF_RANGE
+MAV_CMD_ACK_ERR_Y_LON_OUT_OF_RANGE
+MAV_CMD_ACK_ERR_Z_ALT_OUT_OF_RANGE
+Note: message GPS_STATUS is longer than 64 bytes long (109 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ATTITUDE_QUATERNION_COV is longer than 64 bytes long (80 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GLOBAL_POSITION_INT_COV is longer than 64 bytes long (189 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOCAL_POSITION_NED_COV is longer than 64 bytes long (233 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_ACTUATOR_CONTROLS is longer than 64 bytes long (89 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIGHRES_IMU is longer than 64 bytes long (70 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_SENSOR is longer than 64 bytes long (72 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SIM_STATE is longer than 64 bytes long (92 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message FILE_TRANSFER_PROTOCOL is longer than 64 bytes long (262 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_STATE_QUATERNION is longer than 64 bytes long (72 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOG_DATA is longer than 64 bytes long (105 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_INJECT_DATA is longer than 64 bytes long (121 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SERIAL_CONTROL is longer than 64 bytes long (87 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ENCAPSULATED_DATA is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message RESOURCE_REQUEST is longer than 64 bytes long (251 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message FOLLOW_TARGET is longer than 64 bytes long (101 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message CONTROL_SYSTEM_STATE is longer than 64 bytes long (108 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message AUTOPILOT_VERSION is longer than 64 bytes long (68 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LANDING_TARGET is longer than 64 bytes long (68 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_INPUT is longer than 64 bytes long (71 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_RTCM_DATA is longer than 64 bytes long (190 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HOME_POSITION is longer than 64 bytes long (68 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SET_HOME_POSITION is longer than 64 bytes long (69 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message V2_EXTENSION is longer than 64 bytes long (262 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message CAMERA_INFORMATION is longer than 64 bytes long (243 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message CAMERA_IMAGE_CAPTURED is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOGGING_DATA is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOGGING_DATA_ACKED is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message VIDEO_STREAM_INFORMATION is longer than 64 bytes long (254 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SET_VIDEO_STREAM_SETTINGS is longer than 64 bytes long (255 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message WIFI_CONFIG_AP is longer than 64 bytes long (104 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message UAVCAN_NODE_INFO is longer than 64 bytes long (124 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message PARAM_EXT_VALUE is longer than 64 bytes long (157 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message PARAM_EXT_SET is longer than 64 bytes long (155 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message PARAM_EXT_ACK is longer than 64 bytes long (154 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Validation skipped for ./modules/mavlink/message_definitions/v1.0/uAvionix.xml.
+Parsing ./modules/mavlink/message_definitions/v1.0/uAvionix.xml
+Merged enum MAV_CMD
+Found 218 MAVLink message types in 3 XML files
+Generating C implementation in directory include/mavlink/ardupilotmega
+Generating C implementation in directory include/mavlink/common
+Generating C implementation in directory include/mavlink/uAvionix
+Copying fixed headers for protocol 2.0 to include/mavlink
+/usr/bin/make --no-print-directory all-am
+  CXX      src/mavlink-router/autolog.o
+  CXX      src/mavlink-router/binlog.o
+In file included from src/mavlink-router/binlog.cpp:26:0:
+src/mavlink-router/binlog.cpp: In member function 'void BinLog::_logging_data_process(mavlink_remote_log_data_block_t*)':
+./src/common/log.h:57:63: warning: format '%ld' expects argument of type 'long int', but argument 3 has type 'ssize_t {aka int}' [-Wformat=]
+ #define log_error(...) Log::log(Log::Level::ERROR, __VA_ARGS__)
+                                                               ^
+src/mavlink-router/binlog.cpp:195:9: note: in expansion of macro 'log_error'
+         log_error("Log partial write %ld", r);
+         ^~~~~~~~~
+  CXX      src/common/conf_file.o
+  CXX      src/mavlink-router/endpoint.o
+src/mavlink-router/endpoint.cpp: In member function 'virtual void Endpoint::print_statistics()':
+src/mavlink-router/endpoint.cpp:381:88: warning: format '%lu' expects argument of type 'long unsigned int', but argument 4 has type 'uint64_t {aka long long unsigned int}' [-Wformat=]
+            (_stat.read.crc_error * 100) / read_total, _stat.read.crc_error_bytes / 1000);
+                                                                                        ^
+src/mavlink-router/endpoint.cpp:384:94: warning: format '%lu' expects argument of type 'long unsigned int', but argument 3 has type 'uint64_t {aka long long unsigned int}' [-Wformat=]
+     printf("\n\t\tHandled: %u %luKBytes", _stat.read.handled, _stat.read.handled_bytes / 1000);
+                                                                                              ^
+src/mavlink-router/endpoint.cpp:388:84: warning: format '%lu' expects argument of type 'long unsigned int', but argument 3 has type 'uint64_t {aka long long unsigned int}' [-Wformat=]
+     printf("\n\t\tTotal: %u %luKBytes", _stat.write.total, _stat.write.bytes / 1000);
+                                                                                    ^
+  CXX      src/common/log.o
+  CXX      src/mavlink-router/logendpoint.o
+  CXX      src/mavlink-router/main.o
+  CXX      src/mavlink-router/mainloop.o
+  CXX      src/mavlink-router/pollable.o
+  CXX      src/mavlink-router/timeout.o
+  CXX      src/mavlink-router/ulog.o
+src/mavlink-router/ulog.cpp: In member function 'virtual int ULog::write_msg(const buffer*)':
+src/mavlink-router/ulog.cpp:179:9: warning: attributes at the beginning of statement are ignored [-Wattributes]
+         [[gnu::fallthrough]];
+         ^
+  CC       src/common/util.o
+  CXX      src/common/xtermios.o
+  CXXLD    mavlink-routerd
+  CXX      examples/heartbeat-print.o
+  CXXLD    heartbeat-print
+  CXX      examples/px4-offboard-mode.o
+  CXXLD    px4-offboard-mode
+  CXX      examples/arm-authorizer.o
+  CXXLD    arm-authorizer
+  GEN      mavlink-router.service
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+-- The C compiler identification is GNU 6.3.0
+-- The CXX compiler identification is GNU 6.3.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - not found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Boost version: 1.62.0
+-- Found the following Boost libraries:
+--   program_options
+--   thread
+--   system
+--   chrono
+--   date_time
+--   atomic
+-- Found Readline library at /usr/lib/arm-linux-gnueabihf/libreadline.so
+-- Readline headers found at at /usr/include
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/pi/cmavnode/build
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Scanning dependencies of target cmavnode
+[ 14%] Building CXX object CMakeFiles/cmavnode.dir/src/asyncsocket.cpp.o
+[ 28%] Building CXX object CMakeFiles/cmavnode.dir/src/configfile.cpp.o
+[ 42%] Building CXX object CMakeFiles/cmavnode.dir/src/main.cpp.o
+[ 57%] Building CXX object CMakeFiles/cmavnode.dir/src/mlink.cpp.o
+In file included from /usr/include/c++/6/map:60:0,
+                 from /usr/include/boost/date_time/gregorian/greg_month.hpp:18,
+                 from /usr/include/boost/date_time/gregorian/greg_ymd.hpp:16,
+                 from /usr/include/boost/date_time/gregorian/greg_calendar.hpp:16,
+                 from /usr/include/boost/date_time/gregorian/gregorian_types.hpp:19,
+                 from /usr/include/boost/date_time/posix_time/posix_time_config.hpp:18,
+                 from /usr/include/boost/date_time/posix_time/posix_time_system.hpp:13,
+                 from /usr/include/boost/date_time/posix_time/ptime.hpp:12,
+                 from /usr/include/boost/date_time/posix_time/posix_time_types.hpp:12,
+                 from /usr/include/boost/asio/time_traits.hpp:23,
+                 from /usr/include/boost/asio/deadline_timer_service.hpp:27,
+                 from /usr/include/boost/asio/basic_deadline_timer.hpp:25,
+                 from /usr/include/boost/asio.hpp:22,
+                 from /home/pi/cmavnode/src/mlink.h:14,
+                 from /home/pi/cmavnode/src/mlink.cpp:10:
+/usr/include/c++/6/bits/stl_tree.h: In member function 'std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::iterator std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::erase(std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::iterator) [with _Key = short unsigned int; _Val = std::pair<const short unsigned int, boost::posix_time::ptime>; _KeyOfValue = std::_Select1st<std::pair<const short unsigned int, boost::posix_time::ptime> >; _Compare = std::less<short unsigned int>; _Alloc = std::allocator<std::pair<const short unsigned int, boost::posix_time::ptime> >]':
+/usr/include/c++/6/bits/stl_tree.h:1047:2: note: parameter passing for argument of type 'std::_Rb_tree<short unsigned int, std::pair<const short unsigned int, boost::posix_time::ptime>, std::_Select1st<std::pair<const short unsigned int, boost::posix_time::ptime> >, std::less<short unsigned int>, std::allocator<std::pair<const short unsigned int, boost::posix_time::ptime> > >::const_iterator {aka std::_Rb_tree_const_iterator<std::pair<const short unsigned int, boost::posix_time::ptime> >}' will change in GCC 7.1
+  _M_erase_aux(__position);
+  ^~~~~~~~~~~~
+/usr/include/c++/6/bits/stl_tree.h: In member function 'void std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_erase_aux(std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::const_iterator) [with _Key = short unsigned int; _Val = std::pair<const short unsigned int, boost::posix_time::ptime>; _KeyOfValue = std::_Select1st<std::pair<const short unsigned int, boost::posix_time::ptime> >; _Compare = std::less<short unsigned int>; _Alloc = std::allocator<std::pair<const short unsigned int, boost::posix_time::ptime> >]':
+/usr/include/c++/6/bits/stl_tree.h:2268:5: note: parameter passing for argument of type 'std::_Rb_tree<short unsigned int, std::pair<const short unsigned int, boost::posix_time::ptime>, std::_Select1st<std::pair<const short unsigned int, boost::posix_time::ptime> >, std::less<short unsigned int>, std::allocator<std::pair<const short unsigned int, boost::posix_time::ptime> > >::const_iterator {aka std::_Rb_tree_const_iterator<std::pair<const short unsigned int, boost::posix_time::ptime> >}' will change in GCC 7.1
+     _Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[ 71%] Building CXX object CMakeFiles/cmavnode.dir/src/serial.cpp.o
+[ 85%] Building CXX object CMakeFiles/cmavnode.dir/src/shell.cpp.o
+[100%] Linking CXX executable cmavnode
+[100%] Built target cmavnode
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+[100%] Built target cmavnode
+Install the project...
+-- Install configuration: "Release"
+-- Installing: /usr/local/bin/cmavnode
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+rm -f rx_rc_telemetry_buf rx rx_rc_telemetry rssirx rssitx tx_rawsock tx_telemetry tx_measure rx_status tracker rssilogger syslogger channelscan check_alive rssi_forward wifiscan wifibackgroundscan sharedmem_init_rx sharedmem_init_tx *~ *.o
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+gcc -c -o rx_rc_telemetry_buf.o rx_rc_telemetry_buf.c -Wall -D _GNU_SOURCE
+rx_rc_telemetry_buf.c: In function 'receive_packet':
+rx_rc_telemetry_buf.c:216:9: warning: variable 'type' set but not used [-Wunused-but-set-variable]
+     int type = 0; // r/c or telemetry
+         ^~~~
+rx_rc_telemetry_buf.c:209:28: warning: variable 'prd' set but not used [-Wunused-but-set-variable]
+     PENUMBRA_RADIOTAP_DATA prd;
+                            ^~~
+gcc -c -o lib.o lib.c -Wall -D _GNU_SOURCE
+gcc -c -o radiotap.o radiotap.c -Wall -D _GNU_SOURCE
+gcc -o rx_rc_telemetry_buf rx_rc_telemetry_buf.o lib.o radiotap.o -lrt -lpcap -lwiringPi
+gcc -c -o rx.o rx.c -Wall -D _GNU_SOURCE
+rx.c: In function 'process_packet':
+rx.c:400:25: warning: variable 'prd' set but not used [-Wunused-but-set-variable]
+  PENUMBRA_RADIOTAP_DATA prd;
+                         ^~~
+gcc -c -o fec.o fec.c -Wall -D _GNU_SOURCE
+gcc -o rx rx.o lib.o radiotap.o fec.o -lrt -lpcap -lwiringPi
+gcc -c -o rx_rc_telemetry.o rx_rc_telemetry.c -Wall -D _GNU_SOURCE
+rx_rc_telemetry.c: In function 'process_packet':
+rx_rc_telemetry.c:223:28: warning: variable 'prd' set but not used [-Wunused-but-set-variable]
+     PENUMBRA_RADIOTAP_DATA prd;
+                            ^~~
+gcc -o rx_rc_telemetry rx_rc_telemetry.o lib.o radiotap.o -lrt -lpcap -lwiringPi
+gcc -c -o rssirx.o rssirx.c -Wall -D _GNU_SOURCE
+rssirx.c: In function 'process_packet':
+rssirx.c:102:25: warning: variable 'prd' set but not used [-Wunused-but-set-variable]
+  PENUMBRA_RADIOTAP_DATA prd;
+                         ^~~
+rssirx.c: In function 'main':
+rssirx.c:293:6: warning: variable 'result' set but not used [-Wunused-but-set-variable]
+  int result = 0;
+      ^~~~~~
+gcc -o rssirx rssirx.o lib.o radiotap.o -lrt -lpcap -lwiringPi
+gcc -c -o rssitx.o rssitx.c -Wall -D _GNU_SOURCE
+rssitx.c: In function 'sendRSSI':
+rssitx.c:162:7: warning: unused variable 'number_cards' [-Wunused-variable]
+   int number_cards = td->rx_status->wifi_adapter_cnt;
+       ^~~~~~~~~~~~
+gcc -o rssitx rssitx.o lib.o radiotap.o -lrt -lpcap -lwiringPi
+gcc -c -o tx_rawsock.o tx_rawsock.c -Wall -D _GNU_SOURCE
+gcc -o tx_rawsock tx_rawsock.o lib.o fec.o -lrt -lpcap -lwiringPi
+gcc -c -o tx_telemetry.o tx_telemetry.c -Wall -D _GNU_SOURCE
+gcc -o tx_telemetry tx_telemetry.o lib.o fec.o -lrt -lpcap -lwiringPi
+gcc -c -o tx_measure.o tx_measure.c -Wall -D _GNU_SOURCE
+gcc -o tx_measure tx_measure.o lib.o fec.o -lrt -lpcap -lwiringPi
+gcc -c -o rx_status.o rx_status.c -Wall -D _GNU_SOURCE
+gcc -o rx_status rx_status.o -lrt -lpcap -lwiringPi
+gcc -c -o tracker.o tracker.c -Wall -D _GNU_SOURCE
+gcc -o tracker tracker.o -lrt -lpcap -lwiringPi
+gcc -c -o rssilogger.o rssilogger.c -Wall -D _GNU_SOURCE
+gcc -o rssilogger rssilogger.o -lrt -lpcap -lwiringPi
+gcc -c -o syslogger.o syslogger.c -Wall -D _GNU_SOURCE
+gcc -o syslogger syslogger.o -lrt -lpcap -lwiringPi
+gcc -c -o channelscan.o channelscan.c -Wall -D _GNU_SOURCE
+gcc -o channelscan channelscan.o -lrt -lpcap -lwiringPi
+gcc -c -o check_alive.o check_alive.c -Wall -D _GNU_SOURCE
+gcc -o check_alive check_alive.o -lrt -lpcap -lwiringPi
+gcc -c -o rssi_forward.o rssi_forward.c -Wall -D _GNU_SOURCE
+gcc -o rssi_forward rssi_forward.o -lrt -lpcap -lwiringPi
+gcc -c -o wifiscan.o wifiscan.c -Wall -D _GNU_SOURCE
+wifiscan.c: In function 'process_packet':
+wifiscan.c:111:26: warning: variable 'prd' set but not used [-Wunused-but-set-variable]
+   PENUMBRA_RADIOTAP_DATA prd;
+                          ^~~
+gcc -o wifiscan wifiscan.o radiotap.o -lrt -lpcap -lwiringPi
+gcc -c -o wifibackgroundscan.o wifibackgroundscan.c -Wall -D _GNU_SOURCE
+wifibackgroundscan.c: In function 'process_packet':
+wifibackgroundscan.c:108:26: warning: variable 'prd' set but not used [-Wunused-but-set-variable]
+   PENUMBRA_RADIOTAP_DATA prd;
+                          ^~~
+gcc -o wifibackgroundscan wifibackgroundscan.o radiotap.o -lrt -lpcap -lwiringPi
+gcc -c -o sharedmem_init_rx.o sharedmem_init_rx.c -Wall -D _GNU_SOURCE
+gcc -o sharedmem_init_rx sharedmem_init_rx.o lib.o -lrt -lpcap -lwiringPi
+gcc -c -o sharedmem_init_tx.o sharedmem_init_tx.c -Wall -D _GNU_SOURCE
+gcc -o sharedmem_init_tx sharedmem_init_tx.o lib.o -lrt -lpcap -lwiringPi
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+rm -f wbc_status *.o *~
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+gcc -c -o wbc_status.o wbc_status.c -I/opt/vc/include/ -I/opt/vc/include/interface/vcos/pthreads -I/opt/vc/include/interface/vmcs_host/linux
+wbc_status.c: In function 'main':
+wbc_status.c:30:5: warning: 'init' is deprecated [-Wdeprecated-declarations]
+     init(&width, &height);            // Graphics initialization
+     ^~~~
+In file included from wbc_status.c:12:0:
+/usr/include/shapes.h:46:14: note: declared here
+  extern bool init(int32_t *, int32_t *) DEPRECATED;
+              ^~~~
+wbc_status.c:37:2: warning: 'BackgroundRGB' is deprecated [-Wdeprecated-declarations]
+  if (background == 1) { BackgroundRGB(0, 0, 0, 1); };
+  ^~
+In file included from wbc_status.c:12:0:
+/usr/include/shapes.h:43:14: note: declared here
+  extern void BackgroundRGB(VGuint, VGuint, VGuint, VGfloat) DEPRECATED;
+              ^~~~~~~~~~~~~
+wbc_status.c:48:2: warning: 'BackgroundRGB' is deprecated [-Wdeprecated-declarations]
+  if (background == 1) { BackgroundRGB(0, 0, 0, 1); };
+  ^~
+In file included from wbc_status.c:12:0:
+/usr/include/shapes.h:43:14: note: declared here
+  extern void BackgroundRGB(VGuint, VGuint, VGuint, VGfloat) DEPRECATED;
+              ^~~~~~~~~~~~~
+wbc_status.c:61:5: warning: 'finish' is deprecated [-Wdeprecated-declarations]
+     finish();                 // Graphics cleanup
+     ^~~~~~
+In file included from wbc_status.c:12:0:
+/usr/include/shapes.h:47:14: note: declared here
+  extern void finish() DEPRECATED;
+              ^~~~~~
+gcc -o wbc_status wbc_status.o -lfreetype -lz -L/opt/vc/lib/ -lbrcmGLESv2 -lbrcmEGL -lopenmaxil -lbcm_host -lvcos -lvchiq_arm -lpthread -lrt -lm -lshapes
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+cc  -I/opt/vc/include/ -I/opt/vc/include/interface/vcos/pthreads -I/opt/vc/include/interface/vmcs_host/linux  -c -o main.o main.c
+gcc -o splash main.o -lfreetype -lz -L/opt/vc/lib/ -lbrcmGLESv2 -lbrcmEGL -lopenmaxil -lbcm_host -lvcos -lvchiq_arm -lpthread -lrt -lm -lshapes
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+/usr/bin/make -C libs/ilclient
+make[1]: Entering directory '/opt/vc/src/hello_pi/libs/ilclient'
+cc -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_LINUX -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -U_FORTIFY_SOURCE -Wall -g -DHAVE_LIBOPENMAX=2 -DOMX -DOMX_SKIP64BIT -ftree-vectorize -pipe -DUSE_EXTERNAL_OMX -DHAVE_LIBBCM_HOST -DUSE_EXTERNAL_LIBBCM_HOST -DUSE_VCHIQ_ARM -Wno-psabi -I/opt/vc/include/ -I/opt/vc/include/interface/vcos/pthreads -I/opt/vc/include/interface/vmcs_host/linux -I./ -I/opt/vc/src/hello_pi/libs/ilclient -I/opt/vc/src/hello_pi/libs/vgfont -g -c ilclient.c -o ilclient.o -Wno-deprecated-declarations
+cc -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_LINUX -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -U_FORTIFY_SOURCE -Wall -g -DHAVE_LIBOPENMAX=2 -DOMX -DOMX_SKIP64BIT -ftree-vectorize -pipe -DUSE_EXTERNAL_OMX -DHAVE_LIBBCM_HOST -DUSE_EXTERNAL_LIBBCM_HOST -DUSE_VCHIQ_ARM -Wno-psabi -I/opt/vc/include/ -I/opt/vc/include/interface/vcos/pthreads -I/opt/vc/include/interface/vmcs_host/linux -I./ -I/opt/vc/src/hello_pi/libs/ilclient -I/opt/vc/src/hello_pi/libs/vgfont -g -c ilcore.c -o ilcore.o -Wno-deprecated-declarations
+ar r libilclient.a ilclient.o ilcore.o
+/usr/bin/ar: creating libilclient.a
+rm ilcore.o ilclient.o
+make[1]: Leaving directory '/opt/vc/src/hello_pi/libs/ilclient'
+/usr/bin/make -C libs/vgfont
+make[1]: Entering directory '/opt/vc/src/hello_pi/libs/vgfont'
+cc -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_LINUX -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -U_FORTIFY_SOURCE -Wall -g -DHAVE_LIBOPENMAX=2 -DOMX -DOMX_SKIP64BIT -ftree-vectorize -pipe -DUSE_EXTERNAL_OMX -DHAVE_LIBBCM_HOST -DUSE_EXTERNAL_LIBBCM_HOST -DUSE_VCHIQ_ARM -Wno-psabi -I/usr/include/freetype2 -I/usr/include -I/usr/include/arm-linux-gnueabi -I/opt/vc/include/ -I/opt/vc/include/interface/vcos/pthreads -I/opt/vc/include/interface/vmcs_host/linux -I./ -I/opt/vc/src/hello_pi/libs/ilclient -I/opt/vc/src/hello_pi/libs/vgfont -g -c font.c -o font.o -Wno-deprecated-declarations
+cc -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_LINUX -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -U_FORTIFY_SOURCE -Wall -g -DHAVE_LIBOPENMAX=2 -DOMX -DOMX_SKIP64BIT -ftree-vectorize -pipe -DUSE_EXTERNAL_OMX -DHAVE_LIBBCM_HOST -DUSE_EXTERNAL_LIBBCM_HOST -DUSE_VCHIQ_ARM -Wno-psabi -I/usr/include/freetype2 -I/usr/include -I/usr/include/arm-linux-gnueabi -I/opt/vc/include/ -I/opt/vc/include/interface/vcos/pthreads -I/opt/vc/include/interface/vmcs_host/linux -I./ -I/opt/vc/src/hello_pi/libs/ilclient -I/opt/vc/src/hello_pi/libs/vgfont -g -c vgft.c -o vgft.o -Wno-deprecated-declarations
+cc -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_LINUX -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -U_FORTIFY_SOURCE -Wall -g -DHAVE_LIBOPENMAX=2 -DOMX -DOMX_SKIP64BIT -ftree-vectorize -pipe -DUSE_EXTERNAL_OMX -DHAVE_LIBBCM_HOST -DUSE_EXTERNAL_LIBBCM_HOST -DUSE_VCHIQ_ARM -Wno-psabi -I/usr/include/freetype2 -I/usr/include -I/usr/include/arm-linux-gnueabi -I/opt/vc/include/ -I/opt/vc/include/interface/vcos/pthreads -I/opt/vc/include/interface/vmcs_host/linux -I./ -I/opt/vc/src/hello_pi/libs/ilclient -I/opt/vc/src/hello_pi/libs/vgfont -g -c graphics.c -o graphics.o -Wno-deprecated-declarations
+ar r libvgfont.a font.o vgft.o graphics.o
+/usr/bin/ar: creating libvgfont.a
+rm graphics.o font.o vgft.o
+make[1]: Leaving directory '/opt/vc/src/hello_pi/libs/vgfont'
+/usr/bin/make -C hello_world
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_world'
+cc -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_LINUX -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -U_FORTIFY_SOURCE -Wall -g -DHAVE_LIBOPENMAX=2 -DOMX -DOMX_SKIP64BIT -ftree-vectorize -pipe -DUSE_EXTERNAL_OMX -DHAVE_LIBBCM_HOST -DUSE_EXTERNAL_LIBBCM_HOST -DUSE_VCHIQ_ARM -Wno-psabi -I/opt/vc/include/ -I/opt/vc/include/interface/vcos/pthreads -I/opt/vc/include/interface/vmcs_host/linux -I./ -I/opt/vc/src/hello_pi/libs/ilclient -I/opt/vc/src/hello_pi/libs/vgfont -g -c world.c -o world.o -Wno-deprecated-declarations
+cc -o hello_world.bin -Wl,--whole-archive world.o -L/opt/vc/lib/ -lbrcmGLESv2 -lbrcmEGL -lopenmaxil -lbcm_host -lvcos -lvchiq_arm -lpthread -lrt -lm -L/opt/vc/src/hello_pi/libs/ilclient -L/opt/vc/src/hello_pi/libs/vgfont -Wl,--no-whole-archive -rdynamic
+rm world.o
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_world'
+/usr/bin/make -C hello_triangle
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_triangle'
+cc -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_LINUX -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -U_FORTIFY_SOURCE -Wall -g -DHAVE_LIBOPENMAX=2 -DOMX -DOMX_SKIP64BIT -ftree-vectorize -pipe -DUSE_EXTERNAL_OMX -DHAVE_LIBBCM_HOST -DUSE_EXTERNAL_LIBBCM_HOST -DUSE_VCHIQ_ARM -Wno-psabi -I/opt/vc/include/ -I/opt/vc/include/interface/vcos/pthreads -I/opt/vc/include/interface/vmcs_host/linux -I./ -I/opt/vc/src/hello_pi/libs/ilclient -I/opt/vc/src/hello_pi/libs/vgfont -g -c triangle.c -o triangle.o -Wno-deprecated-declarations
+cc -o hello_triangle.bin -Wl,--whole-archive triangle.o -L/opt/vc/lib/ -lbrcmGLESv2 -lbrcmEGL -lopenmaxil -lbcm_host -lvcos -lvchiq_arm -lpthread -lrt -lm -L/opt/vc/src/hello_pi/libs/ilclient -L/opt/vc/src/hello_pi/libs/vgfont -Wl,--no-whole-archive -rdynamic
+rm triangle.o
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_triangle'
+/usr/bin/make -C hello_triangle2
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_triangle2'
+cc -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_LINUX -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -U_FORTIFY_SOURCE -Wall -g -DHAVE_LIBOPENMAX=2 -DOMX -DOMX_SKIP64BIT -ftree-vectorize -pipe -DUSE_EXTERNAL_OMX -DHAVE_LIBBCM_HOST -DUSE_EXTERNAL_LIBBCM_HOST -DUSE_VCHIQ_ARM -Wno-psabi -I/opt/vc/include/ -I/opt/vc/include/interface/vcos/pthreads -I/opt/vc/include/interface/vmcs_host/linux -I./ -I/opt/vc/src/hello_pi/libs/ilclient -I/opt/vc/src/hello_pi/libs/vgfont -g -c triangle2.c -o triangle2.o -Wno-deprecated-declarations
+cc -o hello_triangle2.bin -Wl,--whole-archive triangle2.o -L/opt/vc/lib/ -lbrcmGLESv2 -lbrcmEGL -lopenmaxil -lbcm_host -lvcos -lvchiq_arm -lpthread -lrt -lm -L/opt/vc/src/hello_pi/libs/ilclient -L/opt/vc/src/hello_pi/libs/vgfont -Wl,--no-whole-archive -rdynamic
+rm triangle2.o
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_triangle2'
+/usr/bin/make -C hello_video
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_video'
+cc -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_LINUX -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -U_FORTIFY_SOURCE -Wall -g -DHAVE_LIBOPENMAX=2 -DOMX -DOMX_SKIP64BIT -ftree-vectorize -pipe -DUSE_EXTERNAL_OMX -DHAVE_LIBBCM_HOST -DUSE_EXTERNAL_LIBBCM_HOST -DUSE_VCHIQ_ARM -Wno-psabi -I/opt/vc/include/ -I/opt/vc/include/interface/vcos/pthreads -I/opt/vc/include/interface/vmcs_host/linux -I./ -I/opt/vc/src/hello_pi/libs/ilclient -I/opt/vc/src/hello_pi/libs/vgfont -g -c video.c -o video.o -Wno-deprecated-declarations
+cc -o hello_video.bin -Wl,--whole-archive video.o -lilclient -L/opt/vc/lib/ -lbrcmGLESv2 -lbrcmEGL -lopenmaxil -lbcm_host -lvcos -lvchiq_arm -lpthread -lrt -lm -L/opt/vc/src/hello_pi/libs/ilclient -L/opt/vc/src/hello_pi/libs/vgfont -Wl,--no-whole-archive -rdynamic
+rm video.o
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_video'
+/usr/bin/make -C hello_audio
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_audio'
+cc -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_LINUX -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -U_FORTIFY_SOURCE -Wall -g -DHAVE_LIBOPENMAX=2 -DOMX -DOMX_SKIP64BIT -ftree-vectorize -pipe -DUSE_EXTERNAL_OMX -DHAVE_LIBBCM_HOST -DUSE_EXTERNAL_LIBBCM_HOST -DUSE_VCHIQ_ARM -Wno-psabi -I/opt/vc/include/ -I/opt/vc/include/interface/vcos/pthreads -I/opt/vc/include/interface/vmcs_host/linux -I./ -I/opt/vc/src/hello_pi/libs/ilclient -I/opt/vc/src/hello_pi/libs/vgfont -g -c audio.c -o audio.o -Wno-deprecated-declarations
+cc -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_LINUX -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -U_FORTIFY_SOURCE -Wall -g -DHAVE_LIBOPENMAX=2 -DOMX -DOMX_SKIP64BIT -ftree-vectorize -pipe -DUSE_EXTERNAL_OMX -DHAVE_LIBBCM_HOST -DUSE_EXTERNAL_LIBBCM_HOST -DUSE_VCHIQ_ARM -Wno-psabi -I/opt/vc/include/ -I/opt/vc/include/interface/vcos/pthreads -I/opt/vc/include/interface/vmcs_host/linux -I./ -I/opt/vc/src/hello_pi/libs/ilclient -I/opt/vc/src/hello_pi/libs/vgfont -g -c sinewave.c -o sinewave.o -Wno-deprecated-declarations
+cc -o hello_audio.bin -Wl,--whole-archive audio.o sinewave.o -lilclient -L/opt/vc/lib/ -lbrcmGLESv2 -lbrcmEGL -lopenmaxil -lbcm_host -lvcos -lvchiq_arm -lpthread -lrt -lm -L/opt/vc/src/hello_pi/libs/ilclient -L/opt/vc/src/hello_pi/libs/vgfont -Wl,--no-whole-archive -rdynamic
+rm sinewave.o audio.o
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_audio'
+/usr/bin/make -C hello_font
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_font'
+cc -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_LINUX -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -U_FORTIFY_SOURCE -Wall -g -DHAVE_LIBOPENMAX=2 -DOMX -DOMX_SKIP64BIT -ftree-vectorize -pipe -DUSE_EXTERNAL_OMX -DHAVE_LIBBCM_HOST -DUSE_EXTERNAL_LIBBCM_HOST -DUSE_VCHIQ_ARM -Wno-psabi -I/opt/vc/include/ -I/opt/vc/include/interface/vcos/pthreads -I/opt/vc/include/interface/vmcs_host/linux -I./ -I/opt/vc/src/hello_pi/libs/ilclient -I/opt/vc/src/hello_pi/libs/vgfont -g -c main.c -o main.o -Wno-deprecated-declarations
+cc -o hello_font.bin -Wl,--whole-archive main.o -lvgfont -lfreetype -lz -L/opt/vc/lib/ -lbrcmGLESv2 -lbrcmEGL -lopenmaxil -lbcm_host -lvcos -lvchiq_arm -lpthread -lrt -lm -L/opt/vc/src/hello_pi/libs/ilclient -L/opt/vc/src/hello_pi/libs/vgfont -Wl,--no-whole-archive -rdynamic
+rm main.o
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_font'
+/usr/bin/make -C hello_dispmanx
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_dispmanx'
+cc -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_LINUX -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -U_FORTIFY_SOURCE -Wall -g -DHAVE_LIBOPENMAX=2 -DOMX -DOMX_SKIP64BIT -ftree-vectorize -pipe -DUSE_EXTERNAL_OMX -DHAVE_LIBBCM_HOST -DUSE_EXTERNAL_LIBBCM_HOST -DUSE_VCHIQ_ARM -Wno-psabi -I/opt/vc/include/ -I/opt/vc/include/interface/vcos/pthreads -I/opt/vc/include/interface/vmcs_host/linux -I./ -I/opt/vc/src/hello_pi/libs/ilclient -I/opt/vc/src/hello_pi/libs/vgfont -g -c dispmanx.c -o dispmanx.o -Wno-deprecated-declarations
+cc -o hello_dispmanx.bin -Wl,--whole-archive dispmanx.o -L/opt/vc/lib/ -lbrcmGLESv2 -lbrcmEGL -lopenmaxil -lbcm_host -lvcos -lvchiq_arm -lpthread -lrt -lm -L/opt/vc/src/hello_pi/libs/ilclient -L/opt/vc/src/hello_pi/libs/vgfont -Wl,--no-whole-archive -rdynamic
+rm dispmanx.o
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_dispmanx'
+/usr/bin/make -C hello_tiger
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_tiger'
+cc -D__RASPBERRYPI__ -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_LINUX -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -U_FORTIFY_SOURCE -Wall -g -DHAVE_LIBOPENMAX=2 -DOMX -DOMX_SKIP64BIT -ftree-vectorize -pipe -DUSE_EXTERNAL_OMX -DHAVE_LIBBCM_HOST -DUSE_EXTERNAL_LIBBCM_HOST -DUSE_VCHIQ_ARM -Wno-psabi -I/opt/vc/include/ -I/opt/vc/include/interface/vcos/pthreads -I/opt/vc/include/interface/vmcs_host/linux -I./ -I/opt/vc/src/hello_pi/libs/ilclient -I/opt/vc/src/hello_pi/libs/vgfont -g -c main.c -o main.o -Wno-deprecated-declarations
+cc -D__RASPBERRYPI__ -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_LINUX -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -U_FORTIFY_SOURCE -Wall -g -DHAVE_LIBOPENMAX=2 -DOMX -DOMX_SKIP64BIT -ftree-vectorize -pipe -DUSE_EXTERNAL_OMX -DHAVE_LIBBCM_HOST -DUSE_EXTERNAL_LIBBCM_HOST -DUSE_VCHIQ_ARM -Wno-psabi -I/opt/vc/include/ -I/opt/vc/include/interface/vcos/pthreads -I/opt/vc/include/interface/vmcs_host/linux -I./ -I/opt/vc/src/hello_pi/libs/ilclient -I/opt/vc/src/hello_pi/libs/vgfont -g -c tiger.c -o tiger.o -Wno-deprecated-declarations
+cc -o hello_tiger.bin -Wl,--whole-archive main.o tiger.o -L/opt/vc/lib/ -lbrcmGLESv2 -lbrcmEGL -lopenmaxil -lbcm_host -lvcos -lvchiq_arm -lpthread -lrt -lm -L/opt/vc/src/hello_pi/libs/ilclient -L/opt/vc/src/hello_pi/libs/vgfont -Wl,--no-whole-archive -rdynamic
+rm main.o tiger.o
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_tiger'
+/usr/bin/make -C hello_encode
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_encode'
+cc -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_LINUX -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -U_FORTIFY_SOURCE -Wall -g -DHAVE_LIBOPENMAX=2 -DOMX -DOMX_SKIP64BIT -ftree-vectorize -pipe -DUSE_EXTERNAL_OMX -DHAVE_LIBBCM_HOST -DUSE_EXTERNAL_LIBBCM_HOST -DUSE_VCHIQ_ARM -Wno-psabi -I/opt/vc/include/ -I/opt/vc/include/interface/vcos/pthreads -I/opt/vc/include/interface/vmcs_host/linux -I./ -I/opt/vc/src/hello_pi/libs/ilclient -I/opt/vc/src/hello_pi/libs/vgfont -g -c encode.c -o encode.o -Wno-deprecated-declarations
+cc -o hello_encode.bin -Wl,--whole-archive encode.o -lilclient -L/opt/vc/lib/ -lbrcmGLESv2 -lbrcmEGL -lopenmaxil -lbcm_host -lvcos -lvchiq_arm -lpthread -lrt -lm -L/opt/vc/src/hello_pi/libs/ilclient -L/opt/vc/src/hello_pi/libs/vgfont -Wl,--no-whole-archive -rdynamic
+rm encode.o
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_encode'
+/usr/bin/make -C hello_jpeg
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_jpeg'
+cc -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_LINUX -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -U_FORTIFY_SOURCE -Wall -g -DHAVE_LIBOPENMAX=2 -DOMX -DOMX_SKIP64BIT -ftree-vectorize -pipe -DUSE_EXTERNAL_OMX -DHAVE_LIBBCM_HOST -DUSE_EXTERNAL_LIBBCM_HOST -DUSE_VCHIQ_ARM -Wno-psabi -I/opt/vc/include/ -I/opt/vc/include/interface/vcos/pthreads -I/opt/vc/include/interface/vmcs_host/linux -I./ -I/opt/vc/src/hello_pi/libs/ilclient -I/opt/vc/src/hello_pi/libs/vgfont -g -c jpeg.c -o jpeg.o -Wno-deprecated-declarations
+cc -o hello_jpeg.bin -Wl,--whole-archive jpeg.o -lilclient -L/opt/vc/lib/ -lbrcmGLESv2 -lbrcmEGL -lopenmaxil -lbcm_host -lvcos -lvchiq_arm -lpthread -lrt -lm -L/opt/vc/src/hello_pi/libs/ilclient -L/opt/vc/src/hello_pi/libs/vgfont -Wl,--no-whole-archive -rdynamic
+rm jpeg.o
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_jpeg'
+/usr/bin/make -C hello_videocube
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_videocube'
+cc -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_LINUX -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -U_FORTIFY_SOURCE -Wall -g -DHAVE_LIBOPENMAX=2 -DOMX -DOMX_SKIP64BIT -ftree-vectorize -pipe -DUSE_EXTERNAL_OMX -DHAVE_LIBBCM_HOST -DUSE_EXTERNAL_LIBBCM_HOST -DUSE_VCHIQ_ARM -Wno-psabi -I/opt/vc/include/ -I/opt/vc/include/interface/vcos/pthreads -I/opt/vc/include/interface/vmcs_host/linux -I./ -I/opt/vc/src/hello_pi/libs/ilclient -I/opt/vc/src/hello_pi/libs/vgfont -g -c triangle.c -o triangle.o -Wno-deprecated-declarations
+cc -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_LINUX -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -U_FORTIFY_SOURCE -Wall -g -DHAVE_LIBOPENMAX=2 -DOMX -DOMX_SKIP64BIT -ftree-vectorize -pipe -DUSE_EXTERNAL_OMX -DHAVE_LIBBCM_HOST -DUSE_EXTERNAL_LIBBCM_HOST -DUSE_VCHIQ_ARM -Wno-psabi -I/opt/vc/include/ -I/opt/vc/include/interface/vcos/pthreads -I/opt/vc/include/interface/vmcs_host/linux -I./ -I/opt/vc/src/hello_pi/libs/ilclient -I/opt/vc/src/hello_pi/libs/vgfont -g -c video.c -o video.o -Wno-deprecated-declarations
+cc -o hello_videocube.bin -Wl,--whole-archive triangle.o video.o -lilclient -L/opt/vc/lib/ -lbrcmGLESv2 -lbrcmEGL -lopenmaxil -lbcm_host -lvcos -lvchiq_arm -lpthread -lrt -lm -L/opt/vc/src/hello_pi/libs/ilclient -L/opt/vc/src/hello_pi/libs/vgfont -Wl,--no-whole-archive -rdynamic
+rm video.o triangle.o
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_videocube'
+/usr/bin/make -C hello_teapot
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_teapot'
+cc -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_LINUX -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -U_FORTIFY_SOURCE -Wall -g -DHAVE_LIBOPENMAX=2 -DOMX -DOMX_SKIP64BIT -ftree-vectorize -pipe -DUSE_EXTERNAL_OMX -DHAVE_LIBBCM_HOST -DUSE_EXTERNAL_LIBBCM_HOST -DUSE_VCHIQ_ARM -Wno-psabi -I/opt/vc/include/ -I/opt/vc/include/interface/vcos/pthreads -I/opt/vc/include/interface/vmcs_host/linux -I./ -I/opt/vc/src/hello_pi/libs/ilclient -I/opt/vc/src/hello_pi/libs/vgfont -g -c triangle.c -o triangle.o -Wno-deprecated-declarations
+cc -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_LINUX -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -U_FORTIFY_SOURCE -Wall -g -DHAVE_LIBOPENMAX=2 -DOMX -DOMX_SKIP64BIT -ftree-vectorize -pipe -DUSE_EXTERNAL_OMX -DHAVE_LIBBCM_HOST -DUSE_EXTERNAL_LIBBCM_HOST -DUSE_VCHIQ_ARM -Wno-psabi -I/opt/vc/include/ -I/opt/vc/include/interface/vcos/pthreads -I/opt/vc/include/interface/vmcs_host/linux -I./ -I/opt/vc/src/hello_pi/libs/ilclient -I/opt/vc/src/hello_pi/libs/vgfont -g -c video.c -o video.o -Wno-deprecated-declarations
+cc -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_LINUX -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -U_FORTIFY_SOURCE -Wall -g -DHAVE_LIBOPENMAX=2 -DOMX -DOMX_SKIP64BIT -ftree-vectorize -pipe -DUSE_EXTERNAL_OMX -DHAVE_LIBBCM_HOST -DUSE_EXTERNAL_LIBBCM_HOST -DUSE_VCHIQ_ARM -Wno-psabi -I/opt/vc/include/ -I/opt/vc/include/interface/vcos/pthreads -I/opt/vc/include/interface/vmcs_host/linux -I./ -I/opt/vc/src/hello_pi/libs/ilclient -I/opt/vc/src/hello_pi/libs/vgfont -g -c models.c -o models.o -Wno-deprecated-declarations
+cc -o hello_teapot.bin -Wl,--whole-archive triangle.o video.o models.o -lilclient -L/opt/vc/lib/ -lbrcmGLESv2 -lbrcmEGL -lopenmaxil -lbcm_host -lvcos -lvchiq_arm -lpthread -lrt -lm -L/opt/vc/src/hello_pi/libs/ilclient -L/opt/vc/src/hello_pi/libs/vgfont -Wl,--no-whole-archive -rdynamic
+rm models.o video.o triangle.o
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_teapot'
+/usr/bin/make -C hello_fft
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_fft'
+gcc -o hello_fft.bin -lrt -lm -ldl mailbox.c gpu_fft.c gpu_fft_base.c gpu_fft_twiddles.c gpu_fft_shaders.c hello_fft.c
+gcc -o hello_fft_2d.bin -lrt -lm -ldl mailbox.c gpu_fft.c gpu_fft_base.c gpu_fft_twiddles.c gpu_fft_shaders.c hello_fft_2d.c gpu_fft_trans.c
+hello_fft_2d.c: In function 'main':
+hello_fft_2d.c:48:25: warning: implicit declaration of function 'mbox_open' [-Wimplicit-function-declaration]
+     int x, y, ret, mb = mbox_open();
+                         ^~~~~~~~~
+hello_fft_2d.c:109:5: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+     usleep(1); /* yield to OS */   t[0] = Microseconds();
+     ^~~~~~
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_fft'
+/usr/bin/make -C hello_mmal_encode
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_mmal_encode'
+cc -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_LINUX -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -U_FORTIFY_SOURCE -Wall -g -DHAVE_LIBOPENMAX=2 -DOMX -DOMX_SKIP64BIT -ftree-vectorize -pipe -DUSE_EXTERNAL_OMX -DHAVE_LIBBCM_HOST -DUSE_EXTERNAL_LIBBCM_HOST -DUSE_VCHIQ_ARM -Wno-psabi -I/opt/vc/include/ -I/opt/vc/include/interface/vcos/pthreads -I/opt/vc/include/interface/vmcs_host/linux -I./ -I/opt/vc/src/hello_pi/libs/ilclient -I/opt/vc/src/hello_pi/libs/vgfont -g -c mmal_encode.c -o mmal_encode.o -Wno-deprecated-declarations
+cc -o hello_mmal_encode.bin -Wl,--whole-archive mmal_encode.o -lmmal -lmmal_core -lmmal_components -lmmal_util -lmmal_vc_client -Wl,--no-as-needed -L/opt/vc/lib/ -lbrcmGLESv2 -lbrcmEGL -lopenmaxil -lbcm_host -lvcos -lvchiq_arm -lpthread -lrt -lm -L/opt/vc/src/hello_pi/libs/ilclient -L/opt/vc/src/hello_pi/libs/vgfont -Wl,--no-whole-archive -rdynamic
+rm mmal_encode.o
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_mmal_encode'
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+/usr/bin/make -C hello_world
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_world'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_world'
+/usr/bin/make -C hello_triangle
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_triangle'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_triangle'
+/usr/bin/make -C hello_triangle2
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_triangle2'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_triangle2'
+/usr/bin/make -C hello_video
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_video'
+cc -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_LINUX -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -U_FORTIFY_SOURCE -Wall -g -DHAVE_LIBOPENMAX=2 -DOMX -DOMX_SKIP64BIT -ftree-vectorize -pipe -DUSE_EXTERNAL_OMX -DHAVE_LIBBCM_HOST -DUSE_EXTERNAL_LIBBCM_HOST -DUSE_VCHIQ_ARM -Wno-psabi -I/opt/vc/include/ -I/opt/vc/include/interface/vcos/pthreads -I/opt/vc/include/interface/vmcs_host/linux -I./ -I/opt/vc/src/hello_pi/libs/ilclient -I/opt/vc/src/hello_pi/libs/vgfont -g -c video.c -o video.o -Wno-deprecated-declarations
+cc -o hello_video.bin -Wl,--whole-archive video.o -lilclient -L/opt/vc/lib/ -lbrcmGLESv2 -lbrcmEGL -lopenmaxil -lbcm_host -lvcos -lvchiq_arm -lpthread -lrt -lm -L/opt/vc/src/hello_pi/libs/ilclient -L/opt/vc/src/hello_pi/libs/vgfont -Wl,--no-whole-archive -rdynamic
+rm video.o
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_video'
+/usr/bin/make -C hello_audio
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_audio'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_audio'
+/usr/bin/make -C hello_font
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_font'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_font'
+/usr/bin/make -C hello_dispmanx
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_dispmanx'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_dispmanx'
+/usr/bin/make -C hello_tiger
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_tiger'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_tiger'
+/usr/bin/make -C hello_encode
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_encode'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_encode'
+/usr/bin/make -C hello_jpeg
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_jpeg'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_jpeg'
+/usr/bin/make -C hello_videocube
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_videocube'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_videocube'
+/usr/bin/make -C hello_teapot
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_teapot'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_teapot'
+/usr/bin/make -C hello_fft
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_fft'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_fft'
+/usr/bin/make -C hello_mmal_encode
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_mmal_encode'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_mmal_encode'
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+/usr/bin/make -C hello_world
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_world'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_world'
+/usr/bin/make -C hello_triangle
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_triangle'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_triangle'
+/usr/bin/make -C hello_triangle2
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_triangle2'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_triangle2'
+/usr/bin/make -C hello_video
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_video'
+cc -DSTANDALONE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -DTARGET_POSIX -D_LINUX -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -U_FORTIFY_SOURCE -Wall -g -DHAVE_LIBOPENMAX=2 -DOMX -DOMX_SKIP64BIT -ftree-vectorize -pipe -DUSE_EXTERNAL_OMX -DHAVE_LIBBCM_HOST -DUSE_EXTERNAL_LIBBCM_HOST -DUSE_VCHIQ_ARM -Wno-psabi -I/opt/vc/include/ -I/opt/vc/include/interface/vcos/pthreads -I/opt/vc/include/interface/vmcs_host/linux -I./ -I/opt/vc/src/hello_pi/libs/ilclient -I/opt/vc/src/hello_pi/libs/vgfont -g -c video.c -o video.o -Wno-deprecated-declarations
+cc -o hello_video.bin -Wl,--whole-archive video.o -lilclient -L/opt/vc/lib/ -lbrcmGLESv2 -lbrcmEGL -lopenmaxil -lbcm_host -lvcos -lvchiq_arm -lpthread -lrt -lm -L/opt/vc/src/hello_pi/libs/ilclient -L/opt/vc/src/hello_pi/libs/vgfont -Wl,--no-whole-archive -rdynamic
+rm video.o
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_video'
+/usr/bin/make -C hello_audio
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_audio'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_audio'
+/usr/bin/make -C hello_font
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_font'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_font'
+/usr/bin/make -C hello_dispmanx
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_dispmanx'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_dispmanx'
+/usr/bin/make -C hello_tiger
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_tiger'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_tiger'
+/usr/bin/make -C hello_encode
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_encode'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_encode'
+/usr/bin/make -C hello_jpeg
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_jpeg'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_jpeg'
+/usr/bin/make -C hello_videocube
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_videocube'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_videocube'
+/usr/bin/make -C hello_teapot
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_teapot'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_teapot'
+/usr/bin/make -C hello_fft
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_fft'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_fft'
+/usr/bin/make -C hello_mmal_encode
+make[1]: Entering directory '/opt/vc/src/hello_pi/hello_mmal_encode'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/opt/vc/src/hello_pi/hello_mmal_encode'
+[21:23:36] End /home/arkbird/wifibroadcast-image-builder/stages/04-Wifibroadcast/01-run-chroot.sh
+[21:23:36] Begin /home/arkbird/wifibroadcast-image-builder/stages/04-Wifibroadcast/02-run.sh
+~/wifibroadcast-image-builder/work/04-Wifibroadcast ~/wifibroadcast-image-builder/stages/04-Wifibroadcast ~/wifibroadcast-image-builder
+[21:23:36] Copy the WFB overlay to the filesystem
+~/wifibroadcast-image-builder/stages/04-Wifibroadcast ~/wifibroadcast-image-builder
+[21:23:37] End /home/arkbird/wifibroadcast-image-builder/stages/04-Wifibroadcast/02-run.sh
+[21:23:37] Begin /home/arkbird/wifibroadcast-image-builder/stages/04-Wifibroadcast/03-run-chroot.sh
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Synchronizing state of anacron.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install disable anacron
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_PAPER = "zh_CN.UTF-8",
+	LC_NUMERIC = "zh_CN.UTF-8",
+	LC_IDENTIFICATION = "zh_CN.UTF-8",
+	LC_MEASUREMENT = "zh_CN.UTF-8",
+	LC_NAME = "zh_CN.UTF-8",
+	LC_TELEPHONE = "zh_CN.UTF-8",
+	LC_ADDRESS = "zh_CN.UTF-8",
+	LC_MONETARY = "zh_CN.UTF-8",
+	LC_TIME = "zh_CN.UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_PAPER = "zh_CN.UTF-8",
+	LC_NUMERIC = "zh_CN.UTF-8",
+	LC_IDENTIFICATION = "zh_CN.UTF-8",
+	LC_MEASUREMENT = "zh_CN.UTF-8",
+	LC_NAME = "zh_CN.UTF-8",
+	LC_TELEPHONE = "zh_CN.UTF-8",
+	LC_ADDRESS = "zh_CN.UTF-8",
+	LC_MONETARY = "zh_CN.UTF-8",
+	LC_TIME = "zh_CN.UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Removed /etc/systemd/system/syslog.service.
+Removed /etc/systemd/system/multi-user.target.wants/rsyslog.service.
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Failed to disable: No such file or directory.
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+ser2net.service is not a native service, redirecting to systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install disable ser2net
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_PAPER = "zh_CN.UTF-8",
+	LC_NUMERIC = "zh_CN.UTF-8",
+	LC_IDENTIFICATION = "zh_CN.UTF-8",
+	LC_MEASUREMENT = "zh_CN.UTF-8",
+	LC_NAME = "zh_CN.UTF-8",
+	LC_TELEPHONE = "zh_CN.UTF-8",
+	LC_ADDRESS = "zh_CN.UTF-8",
+	LC_MONETARY = "zh_CN.UTF-8",
+	LC_TIME = "zh_CN.UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_PAPER = "zh_CN.UTF-8",
+	LC_NUMERIC = "zh_CN.UTF-8",
+	LC_IDENTIFICATION = "zh_CN.UTF-8",
+	LC_MEASUREMENT = "zh_CN.UTF-8",
+	LC_NAME = "zh_CN.UTF-8",
+	LC_TELEPHONE = "zh_CN.UTF-8",
+	LC_ADDRESS = "zh_CN.UTF-8",
+	LC_MONETARY = "zh_CN.UTF-8",
+	LC_TIME = "zh_CN.UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Removed /etc/systemd/system/sysinit.target.wants/systemd-timesyncd.service.
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Removed /etc/systemd/system/multi-user.target.wants/hciuart.service.
+Running in chroot, ignoring request.
+Created symlink /etc/systemd/system/systemd-journald.service → /dev/null.
+Running in chroot, ignoring request.
+Failed to disable: No such file or directory.
+Created symlink /etc/systemd/system/systemd-login.service → /dev/null.
+Running in chroot, ignoring request.
+Synchronizing state of dbus.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install disable dbus
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_PAPER = "zh_CN.UTF-8",
+	LC_NUMERIC = "zh_CN.UTF-8",
+	LC_IDENTIFICATION = "zh_CN.UTF-8",
+	LC_MEASUREMENT = "zh_CN.UTF-8",
+	LC_NAME = "zh_CN.UTF-8",
+	LC_TELEPHONE = "zh_CN.UTF-8",
+	LC_ADDRESS = "zh_CN.UTF-8",
+	LC_MONETARY = "zh_CN.UTF-8",
+	LC_TIME = "zh_CN.UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_PAPER = "zh_CN.UTF-8",
+	LC_NUMERIC = "zh_CN.UTF-8",
+	LC_IDENTIFICATION = "zh_CN.UTF-8",
+	LC_MEASUREMENT = "zh_CN.UTF-8",
+	LC_NAME = "zh_CN.UTF-8",
+	LC_TELEPHONE = "zh_CN.UTF-8",
+	LC_ADDRESS = "zh_CN.UTF-8",
+	LC_MONETARY = "zh_CN.UTF-8",
+	LC_TIME = "zh_CN.UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Created symlink /etc/systemd/system/dbus.service → /dev/null.
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Failed to disable: No such file or directory.
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Failed to disable: No such file or directory.
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Failed to disable: No such file or directory.
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Failed to disable: No such file or directory.
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Failed to disable: No such file or directory.
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Failed to disable: No such file or directory.
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+ser2net.service is not a native service, redirecting to systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install disable ser2net
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_PAPER = "zh_CN.UTF-8",
+	LC_NUMERIC = "zh_CN.UTF-8",
+	LC_IDENTIFICATION = "zh_CN.UTF-8",
+	LC_MEASUREMENT = "zh_CN.UTF-8",
+	LC_NAME = "zh_CN.UTF-8",
+	LC_TELEPHONE = "zh_CN.UTF-8",
+	LC_ADDRESS = "zh_CN.UTF-8",
+	LC_MONETARY = "zh_CN.UTF-8",
+	LC_TIME = "zh_CN.UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_PAPER = "zh_CN.UTF-8",
+	LC_NUMERIC = "zh_CN.UTF-8",
+	LC_IDENTIFICATION = "zh_CN.UTF-8",
+	LC_MEASUREMENT = "zh_CN.UTF-8",
+	LC_NAME = "zh_CN.UTF-8",
+	LC_TELEPHONE = "zh_CN.UTF-8",
+	LC_ADDRESS = "zh_CN.UTF-8",
+	LC_MONETARY = "zh_CN.UTF-8",
+	LC_TIME = "zh_CN.UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Synchronizing state of dbus.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install disable dbus
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_PAPER = "zh_CN.UTF-8",
+	LC_NUMERIC = "zh_CN.UTF-8",
+	LC_IDENTIFICATION = "zh_CN.UTF-8",
+	LC_MEASUREMENT = "zh_CN.UTF-8",
+	LC_NAME = "zh_CN.UTF-8",
+	LC_TELEPHONE = "zh_CN.UTF-8",
+	LC_ADDRESS = "zh_CN.UTF-8",
+	LC_MONETARY = "zh_CN.UTF-8",
+	LC_TIME = "zh_CN.UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_PAPER = "zh_CN.UTF-8",
+	LC_NUMERIC = "zh_CN.UTF-8",
+	LC_IDENTIFICATION = "zh_CN.UTF-8",
+	LC_MEASUREMENT = "zh_CN.UTF-8",
+	LC_NAME = "zh_CN.UTF-8",
+	LC_TELEPHONE = "zh_CN.UTF-8",
+	LC_ADDRESS = "zh_CN.UTF-8",
+	LC_MONETARY = "zh_CN.UTF-8",
+	LC_TIME = "zh_CN.UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+[21:24:06] End /home/arkbird/wifibroadcast-image-builder/stages/04-Wifibroadcast/03-run-chroot.sh
+[21:24:06] Begin /home/arkbird/wifibroadcast-image-builder/stages/04-Wifibroadcast/04-run.sh
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Building v4l2-loopback driver...
+/usr/bin/make -C /lib/modules/4.14.71+/build M=/home/pi/flir/v4l2loopback modules
+make[1]: *** /lib/modules/4.14.71+/build: No such file or directory.  Stop.
+Makefile:42: recipe for target 'v4l2loopback.ko' failed
+make: *** [v4l2loopback.ko] Error 2
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+/usr/bin/make -C /lib/modules/4.14.71+/build M=/home/pi/flir/v4l2loopback modules_install
+make[1]: *** /lib/modules/4.14.71+/build: No such file or directory.  Stop.
+Makefile:47: recipe for target 'install' failed
+make: *** [install] Error 2
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+depmod: WARNING: could not open /lib/modules/4.14.71+/modules.order: No such file or directory
+depmod: WARNING: duplicate module alias:
+usb:v0BDAp8813d*dc*dsc*dp*ic*isc*ip*in* 88XXau
+depmod: WARNING: duplicate module alias:
+usb:v0BDApA811d*dc*dsc*dp*ic*isc*ip*in* 88XXau
+depmod: WARNING: duplicate module alias:
+usb:v2001p3313d*dc*dsc*dp*ic*isc*ip*in* 88XXau
+depmod: WARNING: duplicate module alias:
+usb:v0BDAp881Ad*dc*dsc*dp*ic*isc*ip*in* 88XXau
+depmod: WARNING: duplicate module alias:
+usb:v0BDAp8812d*dc*dsc*dp*ic*isc*ip*in* 88XXau
+depmod: WARNING: could not open /lib/modules/4.14.71+/modules.builtin: No such file or directory
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Building v4l2-loopback driver...
+/usr/bin/make -C /lib/modules/4.14.71-v7+/build M=/home/pi/flir/v4l2loopback modules
+make[1]: *** /lib/modules/4.14.71-v7+/build: No such file or directory.  Stop.
+Makefile:42: recipe for target 'v4l2loopback.ko' failed
+make: *** [v4l2loopback.ko] Error 2
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+/usr/bin/make -C /lib/modules/4.14.71-v7+/build M=/home/pi/flir/v4l2loopback modules_install
+make[1]: *** /lib/modules/4.14.71-v7+/build: No such file or directory.  Stop.
+Makefile:47: recipe for target 'install' failed
+make: *** [install] Error 2
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+depmod: WARNING: could not open /lib/modules/4.14.71-v7+/modules.order: No such file or directory
+depmod: WARNING: duplicate module alias:
+usb:v0BDAp8813d*dc*dsc*dp*ic*isc*ip*in* 88XXau
+depmod: WARNING: duplicate module alias:
+usb:v0BDApA811d*dc*dsc*dp*ic*isc*ip*in* 88XXau
+depmod: WARNING: duplicate module alias:
+usb:v2001p3313d*dc*dsc*dp*ic*isc*ip*in* 88XXau
+depmod: WARNING: duplicate module alias:
+usb:v0BDAp881Ad*dc*dsc*dp*ic*isc*ip*in* 88XXau
+depmod: WARNING: duplicate module alias:
+usb:v0BDAp8812d*dc*dsc*dp*ic*isc*ip*in* 88XXau
+depmod: WARNING: could not open /lib/modules/4.14.71-v7+/modules.builtin: No such file or directory
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Cloning into 'flirone-v4l2'...
+remote: Enumerating objects: 30, done.
+remote: Total 30 (delta 0), reused 0 (delta 0), pack-reused 30
+Unpacking objects: 100% (30/30), done.
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+Unknown host QEMU_IFLA type: 47
+Unknown host QEMU_IFLA type: 48
+Unknown host QEMU_IFLA type: 43
+gcc -I/usr/include/libusb-1.0    -c -o src/flirone.o src/flirone.c
+gcc -I/usr/include/libusb-1.0 -o flirone src/flirone.o -lusb-1.0 -lm -Wall
+[21:24:29] End /home/arkbird/wifibroadcast-image-builder/stages/04-Wifibroadcast/04-run.sh
+[21:24:29] Begin /home/arkbird/wifibroadcast-image-builder/stages/04-Wifibroadcast/99-run.sh
+~/wifibroadcast-image-builder/work/04-Wifibroadcast ~/wifibroadcast-image-builder/stages/04-Wifibroadcast ~/wifibroadcast-image-builder
+0x41: Dirty bit is set. Fs was not properly unmounted and some data may be corrupt.
+ Automatically removing dirty bit.
+~/wifibroadcast-image-builder/stages/04-Wifibroadcast ~/wifibroadcast-image-builder
+[21:24:29] End /home/arkbird/wifibroadcast-image-builder/stages/04-Wifibroadcast/99-run.sh
+[21:24:31] End /home/arkbird/wifibroadcast-image-builder/stages/04-Wifibroadcast
+[21:26:44] End /home/arkbird/wifibroadcast-image-builder
